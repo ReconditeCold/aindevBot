@@ -26,9 +26,6 @@ launchedwith = str(getainid(timestamp=ts))
 async def on_ready():
     print("Bot is on, launched with id")
     print(launchedwith)
-    channel = bot.get_channel(381963689470984203)
-    embed = discord.Embed(title="Bot is launched", description="Bot was started with id " + launchedwith + ".", color=defcolor)
-    await channel.send(embed=embed)
 @bot.event
 async def on_command_error(ctx,err):
     embed = discord.Embed(title="Uh oh! An error occured.", description="The following error occured: ```" + str(err) + "```")
